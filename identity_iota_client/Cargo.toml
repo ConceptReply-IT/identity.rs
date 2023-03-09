@@ -30,15 +30,16 @@ serde_repr = { version = "0.1", default-features = false }
 strum = { version = "0.24.0", default-features = false, features = ["std", "derive"] }
 thiserror = { version = "1.0", default-features = false }
 
+
 [dependencies.iota-client]
 version = "1.2.0"
 features = ["tls"]
 default-features = false
 
-[target.'cfg(all(target_arch = "wasm32", not(target_os = "wasi")))'.dependencies.iota-client]
-version = "1.2.0"
-default-features = false
-features = ["wasm"]
+# [target.'cfg(all(target_arch = "wasm32", not(target_os = "wasi")))'.dependencies.iota-client]
+# version = "1.2.0"
+# default-features = false
+# features = ["wasm"]
 
 [dependencies.iota-crypto]
 version = ">=0.7, <0.10"
